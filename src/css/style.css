@@ -1,0 +1,132 @@
+body{
+    box-sizing: border-box;
+    background-color: #FB6B6B;
+    width: 100vw;
+    height: 100vh;
+}
+.home{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.home button{
+    position: absolute;
+    top: calc(41100%/667);
+    padding: 16px 22px;
+    width: 256px;
+    height: 54px;
+
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+
+    font-family: 'Recursive', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    text-align: center;
+
+    color: #D70900;
+}
+.home h1{
+    position: absolute;
+    top: calc(32200%/667);
+
+    font-family: 'Righteous', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    text-align: center;
+    letter-spacing: -0.012em;
+
+    color: #FFFFFF;
+}
+.home img{
+    position: absolute;
+    top: calc(14800%/667);
+    width: 136px;
+    height: 161px;
+}
+header{
+    width: 100vw;
+    height: 60px;
+}
+header p{
+    width: 203.17px;
+    height: 44px;
+    
+    font-family: 'Righteous', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.012em;
+    
+    color: #FFFFFF;
+    
+    transform: rotate(0.58deg);
+}
+header img{
+    width: 52px;
+    height: 60px;
+}
+footer{
+    width: 375px;
+    height: 70px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+.feedback{
+
+    width: 85.17px;
+    height: 37.17px;
+    border-radius: 5px;
+    
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+span{
+    background-color: #FF3030;
+}
+em{
+    background-color: #FF922E;
+}
+b{
+    background-color: #2FBE34;
+}
+.number{
+    width: 300px;
+    height: 65px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+.flash-card{
+    width: 299px;
+    height: 131px;
+
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
