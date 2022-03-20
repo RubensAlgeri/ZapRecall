@@ -1,4 +1,4 @@
-import logo from "../img/logo.png"
+import logo from "../img/logo-pequeno.png"
 
 export default function Header(){
     return(

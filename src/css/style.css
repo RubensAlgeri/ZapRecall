@@ -56,14 +56,18 @@ body{
     height: 161px;
 }
 header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 60px;
+    margin: 50px 0;
 }
-header p{
+header h1{
     width: 203.17px;
     height: 44px;
     
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Righteous', cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
@@ -74,27 +78,42 @@ header p{
     letter-spacing: -0.012em;
     
     color: #FFFFFF;
-    
-    transform: rotate(0.58deg);
 }
 header img{
     width: 52px;
     height: 60px;
 }
 footer{
-    width: 375px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
     height: 70px;
     
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 }
+footer p{
+    width: 145px;
+    height: 22px;
+
+    font-family: 'Recursive', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #333333
+}
 .feedback{
+    justify-content: center;
 
     width: 85.17px;
     height: 37.17px;
     border-radius: 5px;
     
-    font-family: 'Recursive';
+    font-family: 'Recursive', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -114,19 +133,65 @@ em{
 b{
     background-color: #2FBE34;
 }
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
 .number{
-    width: 300px;
-    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: calc(30000%/375);
+    height: calc(6500%/667);
+    max-width: 567px;
+    
+    margin-bottom: 25px;
     
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 }
+.number p{
+    position: absolute;
+    left: 15px;
+    padding: 30px 0;
+    
+    font-family: 'Recursive', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #333333;
+}
+.number img{
+    position: absolute;
+    width: 31.69px;
+    height: 36.7px;
+    right: 22px;
+}
 .flash-card{
-    width: 299px;
-    height: 131px;
+    position: absolute;
+    top: calc(15000%/667);
+    width: calc(29900%/375);
+    height: calc(13100%/667);
+    max-width: 567px;
 
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+}
+.card{
+
+    font-family: 'Recursive'  sans-serifcursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #333333;
 }
