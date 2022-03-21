@@ -3,6 +3,7 @@ body{
     background-color: #FB6B6B;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 .home{
     position: relative;
@@ -87,29 +88,69 @@ footer{
     position: fixed;
     bottom: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100vw;
-    height: 70px;
+    min-height: 70px;
+    height: auto;
     
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 }
 footer p{
-    width: 145px;
+    margin-bottom: 39px;
     height: 22px;
-
+    width: 100vw;
+    text-align: center;
     font-family: 'Recursive', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
 
-    color: #333333
+    color: #333333;
+}
+h5{
+    margin-top: 16px;
+    font-family: 'Recursive', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #333333;
+}
+.emoji{
+    margin-top: 16px;
+    width: 23px;
+    height: 23px;
+}
+h6{
+    margin-top: 14px;
+    width: 100vw;
+    margin-bottom: 14px;
+    font-family: 'Recursive', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #333333;
+}
+.icons{
+    position: absolute;
+    bottom: 10px;
+}
+.icons img{
+    margin-right: 5px;
 }
 .feedback{
     justify-content: center;
+    padding: 5px;
+    margin-right: 5px;
 
-    width: 85.17px;
+    width: calc(8517%/299);
     height: 37.17px;
     border-radius: 5px;
     
@@ -124,6 +165,13 @@ footer p{
 
     color: #FFFFFF;
 }
+.feedback-buttons{
+    position: absolute;
+    left: 13px;
+    bottom: 6px;
+    display: flex;
+    justify-content: space-evenly;
+}
 span{
     background-color: #FF3030;
 }
@@ -134,6 +182,7 @@ b{
     background-color: #2FBE34;
 }
 .numbers{
+    margin-bottom: 175px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -148,7 +197,8 @@ b{
     width: calc(30000%/375);
     height: calc(6500%/667);
     max-width: 567px;
-    
+    padding: 0 70px;
+    margin: 0 50px;
     margin-bottom: 25px;
     
     background: #FFFFFF;
@@ -158,40 +208,61 @@ b{
 .number p{
     position: absolute;
     left: 15px;
-    padding: 30px 0;
-    
     font-family: 'Recursive', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    
+    font-size: 16px;
+    line-height: 19px;
+}
+.question-number{
     color: #333333;
 }
 .number img{
     position: absolute;
-    width: 31.69px;
-    height: 36.7px;
+    width: 20px;
+    height: 23px;
     right: 22px;
 }
 .flash-card{
-    position: absolute;
-    top: calc(15000%/667);
+    position: relative;
     width: calc(29900%/375);
     height: calc(13100%/667);
     max-width: 567px;
+    padding: 0 70px;
+    margin: 0 50px;
+    margin-bottom: 25px;
 
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 }
+.flash-card img{
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}
 .card{
+    position: absolute;
+    left: 15px;
+    margin-top: 18px;
 
-    font-family: 'Recursive'  sans-serifcursive;
+    font-family: 'Recursive', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
 
     color: #333333;
+}
+.red{
+    text-decoration-line: line-through;
+    color: #FF3030;
+}
+.orange{
+    text-decoration-line: line-through;
+    color: #FF922E;
+}
+.green{
+    text-decoration-line: line-through;
+    color: #2FBE34;
 }
