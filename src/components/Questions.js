@@ -3,7 +3,7 @@ import FlashCard from "./FlashCard";
 import playButton from "../img/play.png"
 
 
-export default function Questions({sendQuestionsToFlashCards}) {
+export default function Questions({sendQuestionsToFlashCards, complete}) {
     const questions = [
         { number:'Pergunta 1', question: 'O que é JSX?', answer: 'Uma extensão de linguagem do JavaScript' },
         { number:'Pergunta 2', question: 'O React é __', answer: 'uma biblioteca JavaScript para construção de interfaces' },
@@ -16,7 +16,7 @@ export default function Questions({sendQuestionsToFlashCards}) {
     ]
     const [selected, setSelected] = useState(false);
     const [numberSelected, setNumberSelected] = useState('');
-    const [flashCardData, setFlashCardData] = useState({complete:1});
+    const [flashCardData, setFlashCardData] = useState({});
     const [verifyCompleted, setVerifyComplete] = useState({cardNumber: "", color: "", completed: false})
 
     function questionSelected(number){
@@ -26,7 +26,7 @@ export default function Questions({sendQuestionsToFlashCards}) {
     const sendFlashToQuestions = (infoFooter)=>{
         setFlashCardData(infoFooter);
         console.log("sendFlashToQuestions", infoFooter);
-        sendQuestionsToFlashCards(flashCardData)
+        sendQuestionsToFlashCards(infoFooter)
         setVerifyComplete(infoFooter)
     }
     return (
@@ -34,9 +34,9 @@ export default function Questions({sendQuestionsToFlashCards}) {
         {questions.map(question=>
                 <>
                 {(selected && numberSelected === question.number) ?
-                    <FlashCard number={question.number} question={question.question} answer={question.answer} sendFlashToQuestions={sendFlashToQuestions} />
+                    <FlashCard complete ={complete} number={question.number} question={question.question} answer={question.answer} sendFlashToQuestions={sendFlashToQuestions} />
                     : (flashCardData.cardNumber === question.number && verifyCompleted.completed) ?
-                        <div className="number">
+                        <div onClick={() => questionSelected(question.number)} className="number">
                             <p className={flashCardData.color}> {question.number} </p>
                             <img src={flashCardData.img} alt="feedback icon" />
                         </div> :

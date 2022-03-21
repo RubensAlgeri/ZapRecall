@@ -20,9 +20,9 @@ export default function FlashCards() {
             <>
                 <Header />
                 <section className="numbers">
-                    <Questions sendQuestionsToFlashCards={sendQuestionsToFlashCards} />
+                    <Questions sendQuestionsToFlashCards={sendQuestionsToFlashCards} complete={icons.length} />
                 </section>
-                <Footer img={icons} complete={questionsData.complete} error={errorsCount} />
+                <Footer img={icons} complete={icons.length} error={errorsCount} />
             </>
     )
 }

@@ -1,6 +1,5 @@
 import party from '../img/party.png'
 import sad from '../img/sad.png'
-import {useState} from 'react'
 
 export default function Footer(props){
     const {complete, img, error} = props
@@ -8,7 +7,7 @@ export default function Footer(props){
 
     return(
         <footer>
-            {complete > 8 ? 
+            {complete >= 8 ? 
             error === 0 ?
             <>
             <img className='emoji' src={party} alt="party emoji"></img>
@@ -18,8 +17,7 @@ export default function Footer(props){
             <>
                 <img className='emoji' src={sad} alt="sad emoji"></img>
                 <h5>Putz...</h5>
-                <h6>{`Ainda faltam alguns...  
-                    Mas não desanime!`}
+                <h6>Ainda faltam alguns... Mas não desanime!
                 </h6>
             </>:
             <>
@@ -27,7 +25,7 @@ export default function Footer(props){
             <p>{complete}/8 CONCLUÍDOS</p>
             <div className="icons">
                 {img.map(img=>
-                    <img src={img}></img>
+                    <img src={img} alt=""></img>
                 )}
             </div>
         </footer>
