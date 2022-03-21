@@ -9,8 +9,10 @@ export default function FlashCards() {
     const [icons, setIcons] = useState([]);
     
     const sendQuestionsToFlashCards = (dataFromQuestions) =>{
+        console.log("sendQ1", dataFromQuestions)
         setQuestionsData(dataFromQuestions);
         if(dataFromQuestions.error === 1) setErrorsCount(errorsCount+1);
+        else setErrorsCount(errorsCount)
         setIcons([...icons, dataFromQuestions.img]);
     }
     console.log("sendQ", questionsData, errorsCount)

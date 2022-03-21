@@ -16,7 +16,7 @@ export default function Questions({sendQuestionsToFlashCards}) {
     ]
     const [selected, setSelected] = useState(false);
     const [numberSelected, setNumberSelected] = useState('');
-    const [flashCardData, setFlashCardData] = useState('');
+    const [flashCardData, setFlashCardData] = useState({complete:1});
     const [verifyCompleted, setVerifyComplete] = useState({cardNumber: "", color: "", completed: false})
 
     function questionSelected(number){
@@ -25,6 +25,7 @@ export default function Questions({sendQuestionsToFlashCards}) {
     }
     const sendFlashToQuestions = (infoFooter)=>{
         setFlashCardData(infoFooter);
+        console.log("sendFlashToQuestions", infoFooter);
         sendQuestionsToFlashCards(flashCardData)
         setVerifyComplete(infoFooter)
     }
@@ -32,9 +33,9 @@ export default function Questions({sendQuestionsToFlashCards}) {
         <>
         {questions.map(question=>
                 <>
-                {(selected && numberSelected === question.number && !verifyCompleted.completed) ?
+                {(selected && numberSelected === question.number) ?
                     <FlashCard number={question.number} question={question.question} answer={question.answer} sendFlashToQuestions={sendFlashToQuestions} />
-                    : flashCardData.cardNumber === question.number ?
+                    : (flashCardData.cardNumber === question.number && verifyCompleted.completed) ?
                         <div className="number">
                             <p className={flashCardData.color}> {question.number} </p>
                             <img src={flashCardData.img} alt="feedback icon" />

@@ -11,7 +11,7 @@ export default function FlashCard({question, answer, number, sendFlashToQuestion
 
     function completed(img, error, cardNumber, color, completed){
         setAnswered(answered+1);
-        console.log("completed",error)
+        console.log("completed",answered)
         const infoFooter = {
             img: img,
             complete: answered,
